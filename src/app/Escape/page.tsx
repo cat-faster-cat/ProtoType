@@ -56,7 +56,7 @@ function EscapePageContent() {
 
   return (
     <>
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#f0f0f0' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
         <p style={{ whiteSpace: 'pre-wrap', textAlign: 'center' }}>{text}</p>
         <form onSubmit={handleSubmit}>
           <input
