@@ -1,0 +1,124 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  color: #ccc;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+  overflow: hidden; /* 全体のスクロールは禁止 */
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  gap: 20px;
+}
+
+/* 左カラム（ターミナル） */
+.leftColumn {
+  width: 55%;
+  height: 100%;
+  overflow-y: hidden; /* スクロールバーを非表示に */
+}
+
+/* 右カラム（モノローグなど） */
+.rightColumn {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  white-space: pre-wrap;
+}
+
+.done {
+  color: #00ff00;
+  margin-left: 10px;
+}
+
+.promptContainer {
+  display: flex;
+}
+
+.prompt {
+  margin-right: 10px;
+}
+
+.input {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-family: inherit;
+  font-size: inherit;
+  width: 100%;
+  outline: none;
+}
+
+/* 進捗バーの行スタイル */
+.progressLine {
+  color: #00ff00;
+}
+
+/* 消去ログの行スタイル */
+.purgeLogText {
+  color: #888;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.monologueWindow {
+  border: 1px solid #888;
+  height: 100%; /* ★ 高さを100%に */
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  /* margin-top: auto; を削除 */
+}
+
+.monologueTitleBar {
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.windowButtons span {
+  margin-left: 8px;
+}
+
+.monologueContent {
+  padding: 10px;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  flex-grow: 1;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  font-family: 'MS Gothic', 'Osaka-mono', monospace;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.glitchPopup {
+  position: absolute;
+  border: 1px solid #888;
+  background-color: #1e1e1e;
+  width: 200px;
+}
+
+.glitchPopupTitleBar {
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.glitchPopupContent {
+  padding: 10px;
+  font-size: 14px;
+  color: #ff4444;
+}

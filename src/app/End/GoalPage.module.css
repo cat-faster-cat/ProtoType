@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a1a1a; /* A softer, dark charcoal */
+  color: #555; /* Muted grey text */
+  overflow: hidden; /* Hide glitch overflow */
+}
+
+.title {
+  font-size: 1.5rem; /* Significantly smaller */
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* A clean, simple sans-serif */
+  font-weight: 300; /* Lighter font weight */
+  letter-spacing: 0.2em; /* Subtle letter spacing */
+  text-transform: none; /* No longer uppercase */
+  position: relative; /* Needed for glitch pseudo-elements */
+}
+
+/* Glitch Effect */
+.glitch {
+  animation: glitch-animation 0.3s steps(2, end) infinite;
+}
+
+/* Animation for the standalone glitch effect */
+@keyframes glitch-animation {
+  0% {
+    text-shadow: 1px 0 0 red, -1px 0 0 cyan;
+    transform: translateX(0);
+  }
+  20% {
+    text-shadow: -1px 0 0 red, 1px 0 0 cyan;
+    transform: translateX(-2px);
+  }
+  60% {
+    text-shadow: 1px 0 0 red, -1px 0 0 cyan;
+    transform: translateX(1px);
+  }
+  100% {
+    text-shadow: -1px 0 0 red, 1px 0 0 cyan;
+    transform: translateX(0);
+  }
+}

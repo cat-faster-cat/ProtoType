@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.fadeOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 9999; /* Ensure it's on top of everything */
+}
+
+.fadeOverlay.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.fileImage {
+  width: 128px;
+  height: 128px;
+  cursor: pointer;
+}
+
+/* Retro Window Styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.retroWindow {
+  background-color: #c0c0c0; /* Classic grey */
+  border: 2px solid;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  width: 900px;
+  max-width: 90%;
+  /* Animation will be applied via a class */
+}
+
+.zooming {
+  animation: zoomIn 0.3s ease-out forwards;
+}
+
+.retroTitleBar {
+  background-color: #000080; /* Classic blue */
+  color: white;
+  padding: 4px 8px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.retroTitleText {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.retroCloseButton {
+  background-color: #c0c0c0;
+  border: 1px solid;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  width: 20px;
+  height: 20px;
+  font-family: "monospace";
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.retroWindowContent {
+  padding: 10px;
+  background-color: #ffffff;
+  margin: 4px;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wingImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
